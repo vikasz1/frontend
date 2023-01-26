@@ -4,7 +4,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/data")
+    fetch("https://vikasz1.onrender.com/api/data")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error(error));
@@ -13,7 +13,13 @@ function App() {
   return (
     <div>
       {data.map((item) => {
-        return <h1 key={item.id}>{item.title}</h1>;
+        console.log(item);
+        return (
+          <>
+            <h1 key={item._id}>{item.name}</h1>
+            <h1 key={item._id}>{item.author}</h1>
+          </>
+        );
       })}
     </div>
   );
