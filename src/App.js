@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 const API =
-  "http://localhost:5000/api/data" || "https://vikasz1.onrender.com/api/data";
+  "https://vikasz1.onrender.com/api/data" || "http://localhost:5000/api/data";
 
 function App() {
   const [data, setData] = useState([]);
